@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import bird from './Flying.jpg';
+import Profile from './Component/Profile/Profile';
+import "./app.css";
+function App () {
+  const handleName = name => alert(name);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Profile fullName="Firas Setti" bio="BIO: I am a fresh graduate student who got his Masters degree in Digital Marketing and Data Analytics, and his bachelors degree in Business English. Nowadays, I am studying at GoMyCode to become a FullStack Web Developer" profession="PROFESSION: FullStack Web Developement Student" handleName={handleName}>
+      <img src={bird} alt='walker'/>
+      </Profile>
     </div>
-  );
+    );
 }
 
 export default App;
